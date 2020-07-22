@@ -8,14 +8,15 @@ func GetSortArrayHashRing(size int) HashRing {
 	}
 	return hashRing
 }
-func GetSortArrayHashRingWithHashFun(size int) HashRing {
-	hashRing := NewHashRing()
-	s := GetMockNodeKey(size)
-	for _, node := range s {
-		hashRing.PutNode(node)
-	}
-	return hashRing
-}
+
+//func GetSortArrayHashRingWithHashFun(size int) HashRing {
+//	hashRing := NewHashRing()
+//	s := GetMockNodeKey(size)
+//	for _, node := range s {
+//		hashRing.PutNode(node)
+//	}
+//	return hashRing
+//}
 func GetSegmentHashRing(nodeSize int, slotSize uint32) HashRing {
 	hashRing := NewSegmentHashRing(slotSize)
 	s := GetMockNodeKey(nodeSize)
